@@ -8,9 +8,7 @@ tags:
 
 > ReSwift 是用 Swift 实现的类似 Redux 的库。翻译这篇文章是在自己完全按照文章学习了一遍后，在文章的各个部分可能加入我自己的对于这个设计模式的一些见解，如有不对的地方，请各位大神指点。蟹蟹
 
-<!--more-->
-
-![Build a Memory Game App with ReSwift!](ReSwift-Tutorial-Memory-Game-App/Build a Memory Game App with ReSwift!.png)
+![Build a Memory Game App with ReSwift!](ReSwift-Tutorial-Memory-Game-App/ReSwift.png)
 
 **Note:** 这个教程使用 Xcode 8 和 Swift 3。
 
@@ -321,10 +319,11 @@ final class MenuTableViewController: UITableViewController {
 > `newState` 回调--定义在`StoreSubscriber`  传递了状态的改变。你可能会在属性中捕获状态的值，就像这样：
 >
 > ```swift
- final class MenuTableViewController: UITableViewController {
-   var currentMenuTitlesState: [String]
-   ....
- }
+>  final class MenuTableViewController: UITableViewController {
+>    var currentMenuTitlesState: [String]
+>    ....
+>  }
+> ```
  ```
 > 但是编写声明式的UI代码清楚地显示了状态是如何转化成视图，这种方式更加干净。
 
@@ -344,13 +343,13 @@ final class MenuTableViewController: UITableViewController {
 事件改变了Store。一个事件是一个简单的结构用来存储变量：事件的参数。一个 Reducer 持有一个被分发的时间并且根据事件的类型和它的参数来改变应用的状态。
 在 `RoutingAction.swift` 中创建一个事件：
 
-```swift
+​```swift
 import ReSwift
 
 struct RoutingAction: Action {
   let destination: RoutingDestination
 }
-```
+ ```
 
 `RoutingAction` 改变当前的路由`destination`。
 
