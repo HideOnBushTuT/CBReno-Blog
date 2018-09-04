@@ -43,3 +43,33 @@ HTTP早起版本不支持持久化连接，每进行一次HTTP通信就要断开
 ##### 管线化
 持久连接使得多数请求可以管线化(pipelining)。使得不用响应上一个请求就可以直接发送下一个请求。这样可以同时并行发送多个请求，而不需要一个一个等待响应。
 
+
+##### Cookie
+HTTP是无状态协议，它不对之前发生过的请求和响应的状态进行管理。无状态的好处是减少服务器以及内存资源的消耗。为了解决状态管理而引入了Cookie技术。
+服务器在响应报文的首部信息中 `Set-Cookie`属性设置Cookie的值。客户端在收到服务器发送过来的响应报文中获取Cookie的值并保存起来，再下次请求的时候在请求报文中加入Cookie值，这样就完成了状态的管理。
+> **请求报文(没有Cookie值) **
+>
+>GET /reader/ HTTP/1.1
+>Host: hackr.jp
+> ...
+> 
+
+> **响应报文(服务器端生成的Cookie信息)**
+> HTTP/1.1 200 OK
+> Date: Thu, 12 Jul 2012 07:12:20 GTM
+> Server: Apache
+> <Set-Cookie: sid=122173812731129738; path=/; expires=Wed,=>10-Oct-12 07:12:20 GTM>
+> Content-Type: text/plain; charset=UTF-8
+> 
+
+> **请求报文(带有Cookie信息)**
+> GET /image HTTP/1.1
+> Host: hackr.jp
+> Cookie: sid=122173812731129738
+
+
+
+### 参考资料：
+- 图解HTTP
+
+
