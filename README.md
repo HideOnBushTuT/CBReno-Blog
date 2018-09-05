@@ -1,6 +1,6 @@
 # CBReno's Blog
 
-![smile](contents/Images/blog.jpg)
+![smile](contents/Images/queen.jpg)
 
 ![](https://img.shields.io/badge/Blog-CBReno-blue.svg) ![](https://img.shields.io/badge/language-Swift-brightgreen.svg) ![](https://img.shields.io/badge/language-JavaScript-brightgreen.svg) [![](https://img.shields.io/badge/weibo-CBReno-orange.svg)](http://weibo.com/CBReno)
 
