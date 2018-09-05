@@ -25,15 +25,6 @@
 | :--------- | :------ | :--------------------------------------- |
 | JavaScript |         | [JavaScript 之 this](https://github.com/HideOnBushTuT/CBReno-Blog/blob/master/contents/JavaScript/JavaScript-之-this.md) |
 
-### Network
-| Project | Version | Article |
-| ------- | ------- | ------- |
-| HTTP    |         | [HTTP 基础](https://github.com/HideOnBushTuT/CBReno-Blog/blob/master/contents/Network/HTTP.md)        |
-
-
-
-
-
 
 ## 交流
 
